@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<scroll-view class="sv" scroll-y style="min-height: calc(100vh - {{SHeight}}px - 70px - {{bottomLift}}px)" scroll-into-view="{{scrollBottom}}" >
+    <view class="box" wx:for="{{history}}" id="item{{index}}" wx:key="key">
+      <view class="item" wx:if="{{item.role == 'assistant'}}">
+        <image src="/static/img/0.png" class="mineAvatorSrc"></image>
+        <view class="mineTextBox">
+          <text class="mineText">{{item.content}}</text>
+        </view>
+      </view>
+
+      <view class="item_user" wx:if="{{item.role == 'user' && index!=0}}">
+        <image src="/static/img/1.png" class="himAvatorSrc"></image>
+        <view class="himTextBox">
+          <text class="himText">{{item.content}}</text>
+        </view>
+        <view class="icon" wx:if="{{state[index] == 0}}">
+          <!-- <icon type="success" size="15" ></icon> -->
+          <l-icon name="success" color="#34BFA3" size="30"/>
+        </view>
+        <view class="icon" wx:if="{{state[index] != 0}}">
+          <!-- <icon type="waiting" size="15" ></icon> -->
+          <l-icon name="loading" color="#34BFA3" size="30"/>
+        </view>
+
+      </view>
+    </view>
+    <view id="scrollBottom"></view>
+  </scroll-view>
+
+  <view class="sendBar">
+  <view class="inputFather">
+    <input type="text"   placeholder="请输入你的问题" value="{{query}}" class="input"   bindinput="noneFunction"	 bindkeyboardheightchange="inputBindFocus" adjust-position = "{{false}}" bindblur="inputBindBlur"/>
+    <view class="button" bindtap="sendQuestion">
+      <image src="/static/icon/发送.png" class="buttonText"></image>
+    </view>
+  </view>
+  </view>

@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/store/store",
+    "pages/mypage/mypage",
+    "pages/history/history"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/logistics-warehouse.png",
+        "selectedIconPath": "static/icon/logistics-warehouse-fill.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "iconPath": "static/icon/order.png",
+        "selectedIconPath": "static/icon/order-fill.png",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "iconPath": "static/icon/cart-full.png",
+        "selectedIconPath": "static/icon/cart-full-fill.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/mypage/mypage",
+        "iconPath": "static/icon/customer-center.png",
+        "selectedIconPath": "static/icon/customer-fill.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
